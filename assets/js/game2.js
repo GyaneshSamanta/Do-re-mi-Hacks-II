@@ -25,7 +25,7 @@ let score = 0;
 completed.style.visibility = "hidden";
 
 function loadImg(imgIdx){
-    instrumentImage.src = `/img/${img[imgIdx]}.jpg`;
+    instrumentImage.src = `/img/i_img/${img[imgIdx]}.jpg`;
 }
 
 function clickedNext(input){

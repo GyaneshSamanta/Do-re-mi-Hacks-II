@@ -36,7 +36,7 @@ loadSong(songs[songIndex]); i++;
 // Update song details
 function loadSong(song) {
   toggle();
-  title.innerText = song;
+  title.innerText = "Tunes";
   audio.src = `/music/${song}.mp3`;
   cover.src = `/img/${song}.jpg`;
 }
