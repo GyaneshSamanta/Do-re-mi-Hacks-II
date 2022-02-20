@@ -1,24 +1,37 @@
 body{
     margin: 0;
     /* text-align: center; */
-    background: #ED4264;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    // background: #ED4264;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to left, #FFEDBC, #ED4264);  /* Chrome 10-25, Safari 5.1-6 */
+    // background: linear-gradient(to left, #FFEDBC, #ED4264); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-image: linear-gradient(
+        to left,
+        rgba(247, 247, 247, 1) 23.8%,
+        rgba(252, 221, 221, 1) 92%
+      );
     box-sizing: border-box;
     header{
+        font-family: 'Roboto', helvetica, arial, sans-serif!important;
         .mini-logo{
-            width: 80vw;
+            width: 70vw;
             display: inline-flex;
+            position: absolute;
+            top: 30px;
+            left: 40px;
             p{
                 margin: 5px;
-                font-size: 1.4rem;
-                font-weight: bold;
+                font-size: 1.4rem!important;
+                font-weight: bold!important;
             }
         }
 
         .auth-links{
-            width: 15vw;
+            width: 20vw;
             display: inline-flex;
+            position: absolute;
+            top: 30px;
+            right: 20px;
             ul{
                 margin: 5% 5px;
                 display: flex;
@@ -26,13 +39,14 @@ body{
                 li{
                     margin-right: 10px;
                     list-style: none;
+                    font-size: 1rem!important;
                 }
             }
         }
     
         a{
-            color: white;
-            text-decoration: none;
+            color: black!important;
+            text-decoration: none!important;
         }
     }
     
