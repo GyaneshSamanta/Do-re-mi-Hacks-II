@@ -12,16 +12,19 @@ Musicallywin.us consists of 2 mini games on the web app which test one's listeni
 
 ## How we built it 🔧
 
+In the web-app we have integrated two mini games which test your analytical and logical deduction capabilities with the help of music. 
+
 
 ## Technology Stack 🔨
 1. HTML
 2. CSS
 3. JS 
 4. Node.js
-5. Twilio
-6. Git and GitHub
-7. Canva
-8. Davinci Resolve 
+5. Express.js
+6. Twilio
+7. Git and GitHub
+8. Canva
+9. Davinci Resolve 
 
 
 ## Challenges we ran into 🏃‍♂️
@@ -44,6 +47,6 @@ Musicallywin.us consists of 2 mini games on the web app which test one's listeni
 
 To a great weekend of hacking by these awesome developers
 
-- [Abhishek](https://github.com/abhishek213-alb) - Twilio Developer
+- [Abhisekh](https://github.com/abhishek213-alb) - Twilio Developer
 - [Gyanesh Samanta](https://github.com/GyaneshSamanta) - Team Lead
 - [Pratik Pattnaik](https://github.com/pratik-chandrasekhar-pattanaik) - Full stack developer
