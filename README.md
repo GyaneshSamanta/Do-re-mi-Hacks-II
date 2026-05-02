@@ -1,54 +1,94 @@
 # Musicallywin.us
 
-Official Submission to do-re-mi-hacks-II organized by MLH.
+> **Train kids' analytical brains through music — two mini-games, one Express app, real SMS feedback.**
 
- - Youtube link- https://youtu.be/gHjMCvwVGhI
+![Game preview](assets/img/1.jpg)
 
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)
+![Twilio](https://img.shields.io/badge/Twilio-F22F46?logo=twilio&logoColor=white)
 
-## Inspiration 💡
-We did a lot of research on the use of aptitude tests to help children develop their analytical and logical abilities. Based on our research, We feel that if we could test out the listening and analytical capabilities of children through music; it would not only interest their participation in such activities but they could have fun doing it.
+[Watch the demo on YouTube](https://youtu.be/gHjMCvwVGhI)
 
-## What it does 🧭
+## About
 
-Musicallywin.us consists of 2 mini games on the web app which test one's listening, analytical and remembering capabilities. With the help of our test results one can accurately monitor their child's progress in their thinking capabilities. With Twilio integration, we send a sms to our user based on their performance for them to be able to track their progress. 
+- **What:** A web app of music-based mini-games that test listening, memory, and logical deduction, with a Twilio SMS hook that sends parents progress updates.
+- **Who:** Team Lead Gyanesh Samanta, full-stack dev Pratik Pattnaik, and Twilio dev Abhisekh.
+- **When:** Built over the do-re-mi-hacks-II hackathon weekend, February 20, 2022.
+- **Where:** Submitted to **do-re-mi-hacks II**, an MLH-affiliated music-themed hackathon.
+- **Why:** Standard aptitude tests bore kids. Music doesn't. We bet that wrapping listening and memory tasks in a game-shaped interface would keep them engaged long enough to actually measure something useful.
 
-## How we built it 🔧
+## The Story
 
-In the web-app we have integrated two mini games which test your analytical and logical deduction capabilities with the help of music. 
+Every parent worth their salt has googled "aptitude test for kids" at least once. The results are uniformly grim — clip-art worksheets, multiple-choice grids, and the kind of UI design that screams *circa 2007*. We thought: what if the test was a game, and what if the medium was music?
 
+Musicallywin.us is the result. Two mini-games sit inside an Express + EJS web app — one tests musical pattern recall, the other tests logical deduction from audio cues. After a session, Twilio fires off an SMS to the parent's phone with a snapshot of how the child performed, so progress is visible without anyone having to log back in.
 
-## Technology Stack 🔨
-1. HTML
-2. CSS
-3. JS 
-4. Node.js
-5. Express.js
-6. Twilio
-7. Git and GitHub
-8. Canva
-9. Davinci Resolve 
+We'd planned five games. We shipped two. The hackathon clock and the Twilio auth dance ate the rest, but the architecture is set up to drop more games in as plug-in routes — exactly what "What's next" exists for.
 
+## Gallery
 
-## Challenges we ran into 🏃‍♂️
- - Integrating Twilio was a real headache, we faced authentication errors and integration errors but somehow made it work.
- - Designing and integrating all the games into a single web-app was a race against time. 
- - Overall integration was extremely difficult and time-consuming. We had initially planned 5 different games for our complete project, but were able to complete 2 in a working manner.
+![Screen 1](assets/img/2.jpg)
+![Screen 2](assets/img/3.jpg)
+![Screen 3](assets/img/4.jpg)
 
-## Accomplishments that we're proud of 🏅
- - Easy to understand, well-documented code.
- - Successfully completed the project with the necessary requisites. 
- - Building something creative and imaginitive in the field of music. 
+---
 
+## Tech Stack
 
-## What's next for Musicallywin.us ⏭
- - To add in more games to stimulate critical thinking capabilities.
- - Publish a total score so as to monitor one's progress.
+- **Frontend:** HTML, CSS, vanilla JS, EJS templates (with `express-ejs-layouts`)
+- **Backend:** Node.js 17, Express 4
+- **Auth & sessions:** Passport (local), express-session, connect-mongo, cookie-parser
+- **Storage:** MongoDB via Mongoose
+- **Notifications:** Twilio SMS, Nodemailer
+- **Other:** Multer (uploads), node-sass-middleware, googleapis, dotenv
+- **Tooling:** Git, Canva (assets), DaVinci Resolve (demo video)
 
+## Repo Structure
 
-## Contributors 🫂
+```
+Do-re-mi-Hacks-II/
+├── index.js              # Express entry point
+├── package.json
+├── config/               # DB + Passport config
+├── controllers/          # Route handlers
+├── routes/               # Express routes
+├── models/               # Mongoose schemas
+├── views/                # EJS templates
+├── assets/               # Static images, CSS, client JS
+└── Twilio/               # SMS integration
+```
 
-To a great weekend of hacking by these awesome developers
+## Getting Started
 
-- [Abhisekh](https://github.com/abhishek213-alb) - Twilio Developer
-- [Gyanesh Samanta](https://github.com/GyaneshSamanta) - Team Lead
-- [Pratik Pattnaik](https://github.com/pratik-chandrasekhar-pattanaik) - Full stack developer
+```bash
+git clone https://github.com/GyaneshSamanta/Do-re-mi-Hacks-II.git
+cd Do-re-mi-Hacks-II
+npm install
+```
+
+Create a `.env` with your `MONGODB_URI`, Twilio credentials (`TWILIO_SID`, `TWILIO_TOKEN`, `TWILIO_FROM`), and any session secret. Then:
+
+```bash
+npm start
+```
+
+The app boots on the port configured in `index.js`. Node 17.x is recommended (matches `engines` in `package.json`).
+
+## Contributing
+
+Pull requests welcome — the natural extension is adding more mini-games as new route + view modules and a unified score endpoint.
+
+## License
+
+[MIT](package.json).
+
+## Credits
+
+| Role | Contributor |
+| :--- | :---------- |
+| Team Lead | [Gyanesh Samanta](https://github.com/GyaneshSamanta) |
+| Full-stack dev | [Pratik Pattnaik](https://github.com/pratik-chandrasekhar-pattanaik) |
+| Twilio dev | [Abhisekh](https://github.com/abhishek213-alb) |
+
+Built at do-re-mi-hacks II, organized by Major League Hacking (MLH).
